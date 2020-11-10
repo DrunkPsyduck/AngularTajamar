@@ -1,6 +1,6 @@
 <h2> Deportes </h2>
 <h2> Número de deportes {{sports.length}}</h2>
-<div *ngIf="sports.length <=7;else deportesMayor7">
+<div *ngIf="sports.length <=7;then deportesMenor7; else deportesMayor7">
     <p>Tienes menos de 7 deportes</p>
 </div>
 <h4> El primer deporte es {{sports[0]}}</h4>
@@ -13,4 +13,8 @@
 
 <ng-template #deportesMayor7>
     <h2 style="color:blue">Tienes más de 7 deportes</h2>
+</ng-template>
+
+<ng-template #deportesMenor7>
+    <h2 style="color: red">Tienes menos de 7 deportes</h2>
 </ng-template>
