@@ -19,7 +19,7 @@ export class PrimerComponente{
     constructor(){
     console.log("creando el primer componente");
     //con this accedemos a las propiedades
-    this.nombre = "S*ck my d*ck";
+    this.nombre = "Hola mundo";
     this.anyo = 2020;
     }
 }

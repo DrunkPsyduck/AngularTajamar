@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 //nombre de la clase
 import {PrimerComponente} from "./../components/primercomponente/PrimerComponente.component";
 import {CiclosVida} from "./../components/ciclosvida/ciclosvida.component"
+import {Deportes} from "./../components/deportes/deportes.component"
 @NgModule({
   declarations: [
-    AppComponent, PrimerComponente,CiclosVida
+    AppComponent, PrimerComponente,CiclosVida, Deportes
   ],
   imports: [
     BrowserModule
