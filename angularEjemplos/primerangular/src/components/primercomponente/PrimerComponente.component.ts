@@ -5,9 +5,10 @@ import {Component} from '@angular/core';
     //Nombre del componente para la app
     selector: "app-primercomponente",
     // plantilla para el componente
-    template: `<h1>Soy el primer componente Angular </h1>
-    <h2>{{nombre}}</h2><h2>{{anyo}}</h2>`
+    templateUrl: "./PrimerComponente.component.html", 
 })
+
+
 
 //Nombre par ala declaración en MODULE
 export class PrimerComponente{
