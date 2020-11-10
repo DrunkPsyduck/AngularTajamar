@@ -1,9 +1,9 @@
-import { componentFactoryName } from '@angular/compiler';
 import{Component} from "@angular/core";
 
 @Component({
     selector: "app-positivo-negativo",
-    templateUrl: "./positivonegativo.component.html"
+    templateUrl: "./positivonegativo.component.html",
+    styleUrls: ["./positivonegativo.component.css"],
 })
 
 export class PositivoNegativo {

@@ -5,15 +5,14 @@ import {Component} from "@angular/core";
     styleUrls: ["./numerosrandom.component.html"]
 })
 
-export class NumerosRandom {
+export class NumerosAleatoreos {
     public numeros: Array<number>;
-    consructor(){
-        this.numeros = [14,86,45];
+    constructor(){
+        this.numeros = [0,4,7];
     }
 
-    generarNumeros () {
-        let rnd = Math.floor(Math.random()*100)+1;
-        this.numeros.push(rnd)
+    generarNumeros(){
+        let aleat = Math.floor(Math.random()*10)+1;
+        this.numeros.push(aleat)
     }
-    
 }

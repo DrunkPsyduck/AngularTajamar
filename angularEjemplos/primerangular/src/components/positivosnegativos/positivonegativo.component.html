@@ -1,8 +1,14 @@
 <h1>Negativo, Positivo o cero</h1>
 <button (click)="generarNumeros()">Generar</button>
 <ul>
-
-    <li *ngFor="let num of numeros">
-        [style.color]="num %2==0 ? 'green': 'red'"
-        {{num}}</li>
+  <li
+    *ngFor="let num of numeros"
+    [ngClass]="{
+      verde: num % 2 == 0,
+      rojo: num % 2 == 1,
+      azul: num === 0
+    }"
+  >
+    {{ num }}
+  </li>
 </ul>
