@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-formulariopersona',
   templateUrl: './formulariopersona.component.html',
-  styleUrls: ['./formulariopersona.component.css']
+  styleUrls: ['./formulariopersona.component.css'],
 })
-export class FormulariopersonaComponent implements OnInit {
+export class FormularioPersona implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
