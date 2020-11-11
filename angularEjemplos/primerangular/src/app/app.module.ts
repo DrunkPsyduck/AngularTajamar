@@ -8,6 +8,7 @@ import { CiclosVida } from './../components/ciclosvida/ciclosvida.component';
 import { Deportes } from './../components/deportes/deportes.component';
 import { PositivoNegativo } from './../components/positivosnegativos/positivonegativo.component';
 import { FormularioPersona } from './../components/formulariopersona/formulariopersona.component';
+import { FormsModule } from '@angular/forms'; //importar los formularios
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,7 @@ import { FormularioPersona } from './../components/formulariopersona/formulariop
     PositivoNegativo,
     FormularioPersona,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

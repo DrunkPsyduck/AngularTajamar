@@ -1,1 +1,31 @@
 <h1>Formularios Binding Model</h1>
+<h2 style="color: blue">{{ mensaje }}</h2>
+<form #userForm="ngForm" (ngSubmit)="recibirDatos()">
+  <label for="nombre">Nombre: </label>
+  <input
+    type="text"
+    name="nombre"
+    #nombre="ngModel"
+    [(ngModel)]="user.nombre"
+  />
+  <br />
+  <label for="apellido">Apellido: </label>
+  <input
+    type="text"
+    name="apellidos"
+    #apellido="ngModel"
+    [(ngModel)]="user.apellidos"
+  />
+  <br />
+  <label for="edad">Edad: </label>
+  <input type="text" name="edad" #edad="ngModel" [(ngModel)]="user.edad" />
+  <br />
+  <button>Enviar</button>
+</form>
+<hr />
+<!-- Los datos serrellenan 'al vuelo' gracias al binding -->
+<ul>
+  <li>Nombre: {{ user.nombre }}</li>
+  <li>Apellidos: {{ user.apellidos }}</li>
+  <li>Edad: {{ user.edad }}</li>
+</ul>
