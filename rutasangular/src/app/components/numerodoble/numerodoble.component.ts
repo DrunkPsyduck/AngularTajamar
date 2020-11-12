@@ -11,6 +11,12 @@ export class NumerodobleComponent implements OnInit {
   public numero: number;
   //Se tienen que inyectar los dos objetos en el contructor para poder recuperarlos
   //En la inyeccion se declaran con private. CUando son inyectadas llevan _
+
+  //metodo para la redireccion en este ejemplo a nostros mismos
+
+  redirect(num){
+    this._router.navigate( ["/numerodoble",num] );
+  }
   constructor( private _activedRoute: ActivatedRoute, private _router:Router ) { 
    
    }
