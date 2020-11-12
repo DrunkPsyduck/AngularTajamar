@@ -12,6 +12,8 @@ import { CineComponent } from './components/rutas/cine/cine.component';
 import { TelevisionComponent } from './components/rutas/television/television.component';
 import { appRoutingProviders, routing } from './app.routing';
 import { MenuComponent } from './components/rutas/menu/menu.component';
+import { Error404Component } from './components/rutas/error404/error404.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,7 @@ import { MenuComponent } from './components/rutas/menu/menu.component';
     CineComponent,
     TelevisionComponent,
     MenuComponent,
+    Error404Component,
   ],
   imports: [BrowserModule, FormsModule, routing],
   providers: [appRoutingProviders],
