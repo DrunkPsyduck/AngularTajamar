@@ -9,8 +9,11 @@ import {Producto} from "./../../models/producto";
 export class ListaproductosComponent implements OnInit {
   //Declaracion de variable del tipo modelo prodcuto
   public producto: Producto;
+  public productos: Array<Producto>
 
   constructor() {
+    this.productos = [];
+
     // cuando se utilizan modelos se utiliza la pala new para crear objetos
     //en el momento que se crea el new entra al constructor del modelo
 
@@ -18,6 +21,7 @@ export class ListaproductosComponent implements OnInit {
     this.producto.nombre = "Err";
     this.producto.imagen ="../../../assets/imagenes/supra.jpg";
     this.producto.precio= 50;
+    this.productos.push(this.producto)
   }
 
   ngOnInit(): void {
