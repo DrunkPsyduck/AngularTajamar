@@ -1,16 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import{appRoutingProviders, routing } from './app.routing';
 import { AppComponent } from './app.component';
+import { CollatzComponent } from './components/collatz/collatz.component';
+import { MenuComponent } from './components/menu/menu.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CollatzComponent,
+    MenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
