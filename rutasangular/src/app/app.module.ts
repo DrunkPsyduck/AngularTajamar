@@ -11,6 +11,7 @@ import { HomeComponent } from './components/rutas/home/home.component';
 import { CineComponent } from './components/rutas/cine/cine.component';
 import { TelevisionComponent } from './components/rutas/television/television.component';
 import { appRoutingProviders, routing } from './app.routing';
+import { MenuComponent } from './components/rutas/menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { appRoutingProviders, routing } from './app.routing';
     MusicaComponent,
     CineComponent,
     TelevisionComponent,
+    MenuComponent,
   ],
   imports: [BrowserModule, FormsModule, routing],
   providers: [appRoutingProviders],
