@@ -24,9 +24,7 @@ export class NumerodobleComponent implements OnInit {
         //Los parametros son string aunque sean númericos
         this.numero = parseInt(params.numero);
         this.doble = this.numero*2;
-      } else {
-        console.log('No params')
-      }
+      } 
     });
   }
 
