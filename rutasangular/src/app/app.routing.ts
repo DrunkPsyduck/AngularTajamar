@@ -8,6 +8,7 @@ import { MusicaComponent } from './components/rutas/musica/musica.component';
 import { CineComponent } from './components/rutas/cine/cine.component';
 import { TelevisionComponent } from './components/rutas/television/television.component';
 import {Error404Component} from './components/rutas/error404/error404.component'
+import {NumerodobleComponent} from './components/numerodoble/numerodoble.component'
 
 //Se crea un array de rutas.Las rutas llevan implicita / por lo que no habria que ponerlas
 //{path: ''; component: componente}
@@ -17,7 +18,10 @@ const appRoutes: Routes = [
   { path: 'musica', component: MusicaComponent },
   { path: 'cine', component: CineComponent },
   { path: 'television', component: TelevisionComponent },
-  {path: '**', component: Error404Component}//? ** indica que se captura el error*/
+  {path: 'numerodoble', component: NumerodobleComponent},
+  {path: 'numerodoble/:numero', component:NumerodobleComponent},
+  //? ** Tiene que ser la última indica que se captura el error*/
+  {path: '**', component: Error404Component}
 ];
 
 //Para poder utilizar esta clase debemos indicar que es un proveedor de rutas
