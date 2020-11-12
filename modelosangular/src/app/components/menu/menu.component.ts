@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     this.numeros = [];
     for(let i = 0 ; i <10; i++){
-      let rnd = Math.floor(Math.random()*50+1);
+      let rnd = Math.floor(Math.random()*(50)+2);
       this.numeros.push(rnd);
     }
    
