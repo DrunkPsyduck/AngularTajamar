@@ -7,7 +7,7 @@ import {ActivatedRoute, Router, Params} from "@angular/router";
   styleUrls: ['./collatz.component.css']
 })
 export class CollatzComponent implements OnInit {
-  public num : number;
+  public numero : number;
   public conjetura: Array<number>;
 
   redirect(num){
@@ -18,20 +18,21 @@ export class CollatzComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.conjetura)
+    
     this._activedRoute.params.subscribe((params: Params)=>{
+      this.conjetura= [];
       if(params.numero!=null){
 
-        this.num = parseInt(params.numero);
-        while(this.num!=1){
+        this.numero = parseInt(params.numero);
+        while(this.numero!=1){
           let aux=0;
-          if(this.num%2==0){
-            aux = this.num/2;
+          if(this.numero%2==0){
+            aux = this.numero/2;
           } else {
-            aux = this.num*3+1;
+            aux = this.numero*3+1;
           }
           this.conjetura.push(aux);
-          this.num=aux;
+          this.numero=aux;
         }
       } 
     });
