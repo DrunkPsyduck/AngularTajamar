@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CollatzComponent } from './components/collatz/collatz.component';
 import { MenuComponent } from './components/menu/menu.component';
 
+import {ListaproductosComponent} from './components/listaproductos/listaproductos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CollatzComponent,
-    MenuComponent
+    MenuComponent,
+    ListaproductosComponent
   ],
   imports: [
     BrowserModule, routing
