@@ -11,6 +11,8 @@ import { CocheComponent } from './components/coche/coche.component';
 import { ConcesionarioComponent } from './components/concesionario/concesionario.component';
 import { PadrecontadorComponent } from './components/padrecontador/padrecontador.component';
 import { HijocontadorComponent } from './components/hijocontador/hijocontador.component';
+import { LibreriaComponent } from './components/libreria/libreria.component';
+import { ComicComponent } from './components/comic/comic.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { HijocontadorComponent } from './components/hijocontador/hijocontador.co
     ConcesionarioComponent,
     HijocontadorComponent,
     PadrecontadorComponent,
+    LibreriaComponent,
+    ComicComponent,
   ],
   imports: [BrowserModule, routing],
   providers: [appRoutingProviders],
