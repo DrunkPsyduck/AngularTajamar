@@ -1,9 +1,12 @@
-export class Producto{
-    public nombre: string;
-    public imagen: string;
-    public precio: number;
-    constructor(nom, img, precio){
-        
-        console.log("Entrando en el constructor")
-    }
+export class Producto {
+  public nombre: string;
+  public imagen: string;
+  public precio: number;
+  constructor(nom, img, precio) {
+    this.nombre = nom;
+    this.imagen = img;
+    this.precio = precio;
+
+    console.log('Entrando en el constructor');
+  }
 }
