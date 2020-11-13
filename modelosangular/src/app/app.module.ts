@@ -10,6 +10,7 @@ import { ListaproductosComponent } from './components/listaproductos/listaproduc
 import { CocheComponent } from './components/coche/coche.component';
 import { ConcesionarioComponent } from './components/concesionario/concesionario.component';
 import { PadrecontadorComponent } from './components/padrecontador/padrecontador.component';
+import { HijocontadorComponent } from './components/hijocontador/hijocontador.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PadrecontadorComponent } from './components/padrecontador/padrecontador
     ListaproductosComponent,
     CocheComponent,
     ConcesionarioComponent,
+    HijocontadorComponent,
     PadrecontadorComponent,
   ],
   imports: [BrowserModule, routing],

@@ -1,1 +1,8 @@
-<p>padrecontador works!</p>
+<h2>{{ mensaje }}</h2>
+<div *ngFor="let num of numeros; let i = index">
+  <app-hijocontador
+    [inicio]="num"
+    [idContador]="i + 1"
+    (recibirIdContador)="recibirIdContador($event)"
+  ></app-hijocontador>
+</div>
