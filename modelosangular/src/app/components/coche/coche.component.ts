@@ -9,7 +9,6 @@ import { Coche } from 'src/app/models/coche';
 export class CocheComponent implements OnInit {
   @Input() car: Coche;
   public mensaje: string;
-  @Input() marca: string;
 
   constructor() {
     //Con objeto s no se utiliza el constructor
