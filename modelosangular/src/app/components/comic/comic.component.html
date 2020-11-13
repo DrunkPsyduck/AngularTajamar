@@ -1,1 +1,4 @@
-<p>comic works!</p>
+<h1>{{ comic.titulo }}</h1>
+<img src="{{ comic.imagen }}" width="15%" />
+<h2>{{ comic.descripcion }}</h2>
+<button (click)="marcarFavorito()">Favorito</button>

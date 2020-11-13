@@ -1,1 +1,12 @@
-<p>libreria works!</p>
+<h1 style="color: indigo">Libreria</h1>
+<div style="background-color: lightblue" *ngIf="favorito != null">
+  <h1 style="color: blue">Favorito: {{ favorito.titulo }}</h1>
+  <img src="{{ favorito.imagen }}" width="15%" />
+</div>
+<div *ngFor="let comic of comics; let i = index">
+  <app-comic
+    [comic]="comic"
+    [indice]="i"
+    (seleccionarFavorito)="seleccionarFavorito($event)"
+  ></app-comic>
+</div>

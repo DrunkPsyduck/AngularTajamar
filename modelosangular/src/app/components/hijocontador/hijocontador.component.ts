@@ -13,7 +13,7 @@ export class HijocontadorComponent implements OnInit {
   public numero: number;
   public mensaje: string;
   //Realizamos la llamada al padre cuando se desee
-  incrementarContador() {
+  incrementarContador(event) {
     this.numero = this.numero + 1;
     this.mensaje =
       'Contador: ' + this.idContador + ' Contador en ' + this.numero;
