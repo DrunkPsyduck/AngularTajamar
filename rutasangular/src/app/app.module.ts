@@ -15,6 +15,7 @@ import { MenuComponent } from './components/rutas/menu/menu.component';
 import { Error404Component } from './components/rutas/error404/error404.component';
 import { NumerodobleComponent } from './components/numerodoble/numerodoble.component';
 import { ListaproductosComponent } from './components/listaproductos/listaproductos.component';
+import { ConcesionarioComponent } from './components/concesionario/concesionario.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ListaproductosComponent } from './components/listaproductos/listaproduc
     Error404Component,
     NumerodobleComponent,
     ListaproductosComponent,
+    ConcesionarioComponent,
   ],
   imports: [BrowserModule, FormsModule, routing],
   providers: [appRoutingProviders],
