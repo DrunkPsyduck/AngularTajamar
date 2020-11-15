@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-//import { Comic } from './../../models/comic';
+import { Comic } from './../../models/comic';
 
 @Component({
   selector: 'app-comic',
