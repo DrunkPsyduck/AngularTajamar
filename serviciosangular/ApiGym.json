@@ -1,0 +1,11 @@
+{
+    "rutina1": {
+        "lunes": "Fullbody, abdominales",
+        "martes": "Pecho, espalda",
+        "miercoles": "Pierna, abdominaless",
+        "jueves": "Brazos, hombro",
+        "viernes": "Fullbody, abdominales",
+        "sabado": "Descanso activo",
+        "Domingo": "Descanso activo"
+    }    
+}

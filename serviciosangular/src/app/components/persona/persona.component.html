@@ -1,0 +1,17 @@
+<p>persona works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>email</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of personas">
+            <td>{{person.Nombre}}</td>
+            <td>{{person.Email}}</td>
+            <td>{{person.Edad}}</td>
+        </tr>
+    </tbody>
+</table>
