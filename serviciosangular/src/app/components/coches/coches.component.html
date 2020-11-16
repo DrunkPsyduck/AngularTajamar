@@ -1,0 +1,21 @@
+<p>coches works!</p>
+<table border="1">
+    <thead>
+        <tr>
+            <th width="15%">id</th>
+            <th>marca</th>
+            <th>modelo</th>
+            <th>conductor</th>
+            <th>imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let coche of coches">
+            <td>{{coche.idcoche}}</td>
+            <td>{{coche.marca}}</td>
+            <td>{{coche.modelo}}</td>
+            <td>{{coche.conductor}}</td>
+            <td><img src="{{coche.imagen}}" height="25%" /></td>
+        </tr>
+    </tbody>
+</table>
