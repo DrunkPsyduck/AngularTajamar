@@ -8,6 +8,7 @@ import { PersonaComponent } from './components/persona/persona.component';
 import { CochesComponent } from './components/coches/coches.component';
 import { FormsModule } from '@angular/forms';
 import { EmpleadosSalarioComponent } from './components/empleados-salario/empleados-salario.component';
+import { EmpleadosOficioComponent } from './components/empleados-oficio/empleados-oficio.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { EmpleadosSalarioComponent } from './components/empleados-salario/emplea
     PersonaComponent,
     CochesComponent,
     EmpleadosSalarioComponent,
+    EmpleadosOficioComponent,
   ],
   imports: [BrowserModule, HttpClientModule, FormsModule],
   providers: [],

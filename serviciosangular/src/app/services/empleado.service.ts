@@ -16,4 +16,17 @@ export class EmpleadoService {
     let request = '/api/empleados/empleadossalario/' + salario;
     return this._http.get(this.url + request);
   }
+
+  buscarOficio(): Observable<any> {
+    let request = '/api/empleados/oficios';
+    return this._http.get(this.url + request);
+  }
+  buscarEmpleadoOficio(departamento: string): Observable<any> {
+    let request = 'api/Empleados/EmpleadosOficio/' + departamento;
+    return this._http.get(this.url + request);
+  }
+
+  ngOnInit(): void {
+    this.buscarOficio();
+  }
 }
