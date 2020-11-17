@@ -11,7 +11,12 @@ import { GeneroComponent } from './components/genero/genero.component';
 import { PeliculasComponent } from './components/peliculas/peliculas.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, NavbarComponent, GeneroComponent, PeliculasComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    GeneroComponent,
+    PeliculasComponent,
+  ],
   imports: [BrowserModule, HttpClientModule, FormsModule, routing],
   providers: [appRoutingProvider],
   bootstrap: [AppComponent],

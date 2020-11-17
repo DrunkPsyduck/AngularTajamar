@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Genero } from 'src/app/models/genero';
+import { Generos } from 'src/app/models/genero';
 import { Pelicula } from 'src/app/models/pelicula';
-import { PeliculasService } from 'src/app/services/peliculas.service';
+import { PeliculasService } from './../../services/peliculas.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,27 +10,16 @@ import { PeliculasService } from 'src/app/services/peliculas.service';
   providers: [PeliculasService],
 })
 export class NavbarComponent implements OnInit {
-  public generos: Array<Genero>;
+  public generos: Array<Generos>;
   //@ViewChild('selectorGenero') selectorgenero: ElementRef;
 
   constructor(private _service: PeliculasService) {
-    this.generos = [];
     // this.selectorgenero = ElementRef.prototype;
   }
 
-  buscarGeneros() {
-    this.generos = [];
-    this._service.getGeneros().subscribe(
-      (response) => {
-        this.generos = response;
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-
   ngOnInit(): void {
-    this.buscarGeneros();
+    this._service.getGeneros().subscribe((response) => {
+      this.generos = response;
+    });
   }
 }

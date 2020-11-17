@@ -13,13 +13,17 @@ export class PeliculasService {
     this.url = Global.urlPeliculas;
   }
 
-  getPeliculas() {
+  getPeliculas(): Observable<any> {
     let request = '/api/Peliculas';
     return this._http.get(this.url + request);
   }
 
-  getGeneros() {
-    let request = '/api/Generos';
+  getPeliculaGen(gen): Observable<any> {
+    let request = '/api/peliculasgenero/' + gen;
+    return this._http.get(this.url + request);
+  }
+  getGeneros(): Observable<any> {
+    let request = '/api/Generos/';
     return this._http.get(this.url + request);
   }
 }
