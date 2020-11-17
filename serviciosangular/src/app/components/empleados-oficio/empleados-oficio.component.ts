@@ -9,15 +9,15 @@ import { Empleado } from './../../models/empleado';
   providers: [EmpleadoService],
 })
 export class EmpleadosOficioComponent implements OnInit {
-  public oficios: Array<Empleado>;
+  public oficios: Array<string>;
   public empleados: Array<Empleado>;
-  @ViewChild('cajadepartamento') cajadepartamento: ElementRef;
+  @ViewChild('selectoficio') selectoficio: ElementRef;
 
   buscarOficio() {
     this._service.buscarOficio().subscribe(
       (response) => {
         this.oficios = response;
-        console.log(this.oficios);
+        console.log(typeof this.oficios);
       },
       (error) => {
         console.log(error);
@@ -26,11 +26,12 @@ export class EmpleadosOficioComponent implements OnInit {
   }
 
   buscarEmpleadoDepartamento() {
-    let dept = this.cajadepartamento.nativeElement.value;
-    this._service.buscarEmpleadosSalario(dept).subscribe(
+    this.empleados = [];
+    console.log();
+    let dept = this.selectoficio.nativeElement.value;
+    this._service.buscarEmpleadoOficio(dept).subscribe(
       (response) => {
         this.empleados = response;
-        console.log(response);
       },
       (error) => {
         console.log(error);
@@ -40,6 +41,7 @@ export class EmpleadosOficioComponent implements OnInit {
   constructor(private _service: EmpleadoService) {
     this.oficios = [];
     this.empleados = [];
+    this.selectoficio = ElementRef.prototype; //inicializacion del elementRef
   }
 
   ngOnInit(): void {

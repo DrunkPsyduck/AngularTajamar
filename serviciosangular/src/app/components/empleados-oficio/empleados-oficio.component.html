@@ -1,23 +1,30 @@
 <p>empleados-oficio works!</p>
 
-<select>
-    <option *ngFor="let ofi of oficios" value={{ofi}} #cajadepartamento name="cajadepartamento">{{ofi}}</option>
-</select>
-<br />
-<button (click)="buscarEmpleadoDepartamento()" class="btn btn-success">Buscar</button>
-<div *ngIf="empleados.length>0">
-    <table>
-        <thead>
-            <tr>
-                <th>Apellido</th>
-                <th>Salario></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let emp of empleados">
-                <td>{{emp.apellido}}</td>
-                <td>{{emp.salario}}</td>
-            </tr>
-        </tbody>
-    </table>
+<form #oficiosForm="ngForm">
+  <select #selectoficio name="selectoficio" cclass="form-control">
+    <ng-container *ngFor="let ofi of oficios">
+      <option value="{{ ofi }}">{{ ofi }}</option>
+    </ng-container>
+  </select>
+  <br />
+  <button (click)="buscarEmpleadoDepartamento()" class="btn btn-success">
+    Buscar
+  </button>
+</form>
+
+<div *ngIf="empleados.length > 0">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Apellido</th>
+        <th>Salario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of empleados">
+        <td>{{ emp.apellido }}</td>
+        <td>{{ emp.salario }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

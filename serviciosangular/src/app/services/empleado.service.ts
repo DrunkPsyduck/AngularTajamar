@@ -21,8 +21,9 @@ export class EmpleadoService {
     let request = '/api/empleados/oficios';
     return this._http.get(this.url + request);
   }
-  buscarEmpleadoOficio(departamento: string): Observable<any> {
-    let request = 'api/Empleados/EmpleadosOficio/' + departamento;
+  buscarEmpleadoOficio(oficio): Observable<any> {
+    let request = 'api/Empleados/EmpleadosOficio/' + oficio;
+    console.log(oficio);
     return this._http.get(this.url + request);
   }
 
