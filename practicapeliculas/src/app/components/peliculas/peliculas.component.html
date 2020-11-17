@@ -1,4 +1,25 @@
 <h2>ANgular es una mierda</h2>
-<div *ngFor="let pelisGen of peliculasGen">
-  {{ pelisGen.idPelicula }}
-</div>
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th>Director</th>
+      <th>actores</th>
+      <th>duracion</th>
+      <th>Imagen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pelis of peliculasGen">
+      <td>{{ pelis.titulo }}</td>
+      <td>{{ pelis.argumento }}</td>
+      <td>{{ pelis.director }}</td>
+      <td>{{ pelis.actores }}</td>
+      <td>{{ pelis.duracion }}</td>
+      <td>
+        <img src="{{ pelis.foto }}" width="100%" heigth="auto" alt="imagen" />
+      </td>
+    </tr>
+  </tbody>
+</table>

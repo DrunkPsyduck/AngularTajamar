@@ -6,7 +6,7 @@ import { PeliculasComponent } from './components/peliculas/peliculas.component';
 const appRoutes: Routes = [
   { path: 'genero/:idgen', component: GeneroComponent },
   { path: 'peliculasgenero/:idgen', component: PeliculasComponent },
-  { path: 'peliculas', component: PeliculasComponent },
+  { path: 'busqueda/:busqueda', component: PeliculasComponent },
 ];
 
 export const appRoutingProvider: any[] = [];

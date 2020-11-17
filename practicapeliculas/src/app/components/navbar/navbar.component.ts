@@ -1,6 +1,12 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
+
 import { Generos } from 'src/app/models/genero';
-import { Pelicula } from 'src/app/models/pelicula';
 import { PeliculasService } from './../../services/peliculas.service';
 
 @Component({
@@ -11,10 +17,16 @@ import { PeliculasService } from './../../services/peliculas.service';
 })
 export class NavbarComponent implements OnInit {
   public generos: Array<Generos>;
-  //@ViewChild('selectorGenero') selectorgenero: ElementRef;
+  @ViewChild('buscarPelicula') buscarPelicula: ElementRef;
+
+  busqueda() {
+    let titulo = this.buscarPelicula.nativeElement.value;
+    console.log(titulo);
+    return this.busqueda;
+  }
 
   constructor(private _service: PeliculasService) {
-    // this.selectorgenero = ElementRef.prototype;
+    this.buscarPelicula = ElementRef.prototype;
   }
 
   ngOnInit(): void {

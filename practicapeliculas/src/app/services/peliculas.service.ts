@@ -19,11 +19,16 @@ export class PeliculasService {
   }
 
   getPeliculaGen(gen): Observable<any> {
+    console.log(gen);
     let request = '/api/peliculasgenero/' + gen;
     return this._http.get(this.url + request);
   }
   getGeneros(): Observable<any> {
     let request = '/api/Generos/';
+    return this._http.get(this.url + request);
+  }
+  buscarPelicula(titulo): Observable<any> {
+    let request = 'api/peliculastitulo/' + titulo;
     return this._http.get(this.url + request);
   }
 }

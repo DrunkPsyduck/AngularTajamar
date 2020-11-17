@@ -32,12 +32,12 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          Dropdown
+          Generos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li *ngFor="let gen of generos">
-            <a [routerLink]="['/peliculasgenero/', gen.idGenero]">
-              {{ gen.nombreGenero }}</a
+            <a [routerLink]="['/peliculasgenero', gen.idGenero]">
+              {{ gen.idGenero }} . {{ gen.nombreGenero }}</a
             >
           </li>
         </div>
@@ -46,14 +46,16 @@
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form #peliculaForm="ngForm" class="form-inline my-2 my-lg-0">
       <input
         class="form-control mr-sm-2"
         type="search"
+        name="buscarPelicula"
+        #buscarPelicula
         placeholder="Search"
         aria-label="Search"
       />
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+      <button class="btn btn-outline-success my-2 my-sm-0" (click)="busqueda()">
         Search
       </button>
     </form>
