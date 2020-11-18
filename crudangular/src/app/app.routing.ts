@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { DepartamentosComponent } from './components/departamentos/departamentos.component';
 import { InsertarComponent } from './components/insertar/insertar.component';
-import { ModificarComponent } from './components/departamentos/modificar/modificar.component';
+import { ModificarComponent } from './components/modificar/modificar.component';
 
 const appRoutes: Routes = [
   { path: '', component: DepartamentosComponent },

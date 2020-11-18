@@ -18,7 +18,8 @@
                 <td>
                     {{dept.localidad}}
                 </td>
-                <td><a [routerLink]="['/eliminar', dept.numero]" class="btn btn-danger">Eliminar</a></td>
+                <td><a [routerLink]="['/eliminar', dept.numero]" class="btn btn-danger">Eliminar</a>
+                    <a [routerLink]="['/modificar', dept.numero]" class="btn btn-warning">Modificar</a></td>
             </tr>
         </tbody>
     </table>

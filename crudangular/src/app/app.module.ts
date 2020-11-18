@@ -8,10 +8,16 @@ import { DepartamentoService } from './services/departamento.service';
 import { MenuComponent } from './components/menu/menu.component';
 import { DepartamentosComponent } from './components/departamentos/departamentos.component';
 import { InsertarComponent } from './components/insertar/insertar.component';
-import { ModificarComponent } from './components/departamentos/modificar/modificar.component';
+import { ModificarComponent } from './components/modificar/modificar.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, DepartamentosComponent, InsertarComponent, ModificarComponent],
+  declarations: [
+    AppComponent,
+    MenuComponent,
+    DepartamentosComponent,
+    InsertarComponent,
+    ModificarComponent,
+  ],
   imports: [BrowserModule, FormsModule, routing, HttpClientModule],
   providers: [appRoutingProvider, DepartamentoService],
   bootstrap: [AppComponent],
