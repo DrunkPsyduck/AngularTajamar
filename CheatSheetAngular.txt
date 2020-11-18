@@ -1,0 +1,1 @@
+ng g c --skipTests=true -is components/new_component
