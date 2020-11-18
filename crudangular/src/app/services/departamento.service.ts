@@ -17,8 +17,13 @@ export class DepartamentoService {
     let request = '/api/departamentos';
     let json = JSON.stringify(departamento);
     //para enviar la información al servicio se realiza mediante cabeceras.
-    let header = new HttpHeaders().set('Content-Type', 'application/json');
+    let header = new HttpHeaders.arguments('Content-Type', 'application/json');
     return this._http.post(this.url + request, json, { headers: header });
+  }
+
+  buscarDepartamento(iddepartamento: string): Observable<any> {
+    let request = '/api/departamentos/' + iddepartamento;
+    return this._http.get(this.url + request);
   }
 
   getDepartamentos(): Observable<any> {
@@ -29,5 +34,13 @@ export class DepartamentoService {
   eliminarDepartamento(iddepartamento: string): Observable<any> {
     let request = '/api/departamentos/' + iddepartamento;
     return this._http.delete(this.url + request);
+  }
+  updateDepartamento(departamento: Departamento): Observable<any> {
+    let json = JSON.stringify(Departamento);
+    let header = new HttpHeaders().set('Content-Type', 'application/json');
+    let request = '/api/departamentos';
+    return this._http.put(this.url + request, json, {
+      headers: header,
+    });
   }
 }
