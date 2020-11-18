@@ -23,7 +23,7 @@ export class HospitalesService {
     return this._http.get(this.url + request);
   }
   eliminarHospital(idhospital): Observable<any> {
-    let request = '/webresources/hospitales/delete' + idhospital;
+    let request = '/webresources/hospitales/delete/' + idhospital;
     return this._http.delete(this.url + request);
   }
 

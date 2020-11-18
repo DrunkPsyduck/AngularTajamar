@@ -8,6 +8,7 @@ const appRoutes: Routes = [
   { path: '', component: HospitalesComponent },
   { path: 'modificar/:idhospital', component: ModificarComponent },
   { path: 'insertar', component: InsertarComponent },
+  { path: 'borrar/:idhospital', component: HospitalesComponent },
 ];
 
 export const appRoutingProvider: any[] = [];
