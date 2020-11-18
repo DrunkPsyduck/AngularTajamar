@@ -1,5 +1,5 @@
 <div *ngIf="departamentos.length>0">
-    <table class="table table-bordered">
+    <table class="table table-bordered table-dark">
         <thead>
             <tr>
                 <th>Número</th>
@@ -18,6 +18,7 @@
                 <td>
                     {{dept.localidad}}
                 </td>
+                <td><a [routerLink]="['/eliminar', dept.numero]" class="btn btn-danger">Eliminar</a></td>
             </tr>
         </tbody>
     </table>
