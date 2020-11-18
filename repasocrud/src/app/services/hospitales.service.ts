@@ -26,4 +26,18 @@ export class HospitalesService {
     let request = '/webresources/hospitales/delete' + idhospital;
     return this._http.delete(this.url + request);
   }
+
+  buscarhospital(idHospital: string): Observable<any> {
+    let request = '/webresources/hospitales/' + idHospital;
+    return this._http.get(this.url + request);
+  }
+
+  updateHospital(hospitales: Hospitales): Observable<any> {
+    let json = JSON.stringify(hospitales);
+    let header = new HttpHeaders().set('Content-Type', 'application/json');
+    let request = '/webresources/hospitales/put';
+    return this._http.put(this.url + request, json, {
+      headers: header,
+    });
+  }
 }

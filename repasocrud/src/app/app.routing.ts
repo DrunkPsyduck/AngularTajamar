@@ -6,7 +6,7 @@ import { ModificarComponent } from './components/modificar/modificar.component';
 
 const appRoutes: Routes = [
   { path: '', component: HospitalesComponent },
-  { path: 'modificar', component: ModificarComponent },
+  { path: 'modificar/:idhospital', component: ModificarComponent },
   { path: 'insertar', component: InsertarComponent },
 ];
 

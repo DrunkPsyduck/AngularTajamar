@@ -1,1 +1,49 @@
-<p>modificar works!</p>
+<h1 style="color: indigo">Update Hospital</h1>
+<div *ngIf="hospital != null">
+  <form #updateform="ngForm">
+    <label>id</label>
+    <input
+      type="number"
+      #cajaid
+      name="cajaid"
+      class="form-control"
+      value="{{ hospital.idhospital }}"
+      readonly
+    /><br />
+    <label>Nombre</label>
+    <input
+      type="text"
+      #cajanombre
+      name="cajanombre"
+      class="form-control"
+      value="{{ hospital.nombre }}"
+    /><br />
+    <label>direccion</label>
+    <input
+      type="text"
+      #cajadireccion
+      name="cajadireccion"
+      class="form-control"
+      value="{{ hospital.direccion }}"
+    /><br />
+    <label>telefono</label>
+    <input
+      type="text"
+      #cajatelefono
+      name="cajatelefono"
+      class="form-control"
+      value="{{ hospital.telefono }}"
+    /><br />
+    <label>camas</label>
+    <input
+      type="text"
+      #cajacamas
+      name="cajacamas"
+      class="form-control"
+      value="{{ hospital.camas }}"
+    /><br />
+    <button class="btn btn-warning" (click)="updateHospital()">
+      Modificar
+    </button>
+  </form>
+</div>
