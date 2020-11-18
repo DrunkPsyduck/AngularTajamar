@@ -1,0 +1,38 @@
+<div>
+  <h2>Nuevo departamento</h2>
+  <form #insertarForm="ngForm">
+    <label> idHospital </label>
+    <input type="number" class="form-control" #cajaid name="cajaid" /><br />
+    <label>Nombre</label>
+    <input
+      type="text"
+      class="form-control"
+      #cajanombre
+      name="cajanombre"
+    /><br />
+    <label>direccion</label>
+    <input
+      type="text"
+      class="form-control"
+      #cajadireccion
+      name="cajadireccion"
+    /><br />
+    <label>telefono</label>
+    <input
+      type="text"
+      class="form-control"
+      #cajatelefono
+      name="cajatelefono"
+    /><br />
+    <label>Camas</label>
+    <input
+      type="number"
+      class="form-control"
+      #cajacamas
+      name="cajacamas"
+    /><br />
+    <button (click)="insertarHopsital()" class="btn btn-primary">
+      Insertar
+    </button>
+  </form>
+</div>

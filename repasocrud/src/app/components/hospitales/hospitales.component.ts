@@ -21,16 +21,21 @@ export class HospitalesComponent implements OnInit {
     this._service.getHospitales().subscribe(
       (response) => {
         this.hospitales = response;
+        console.log(this.hospitales);
       },
       (error) => {
         console.log(error);
       }
     );
   }
-  eliminarHospital(idhosp) {}
+  eliminarHospital(idhosp) {
+    this._service.eliminarHospital(idhosp).subscribe((response) => {
+      this.cargarHospitales();
+    });
+  }
   ngOnInit(): void {
     this._activedRoute.params.subscribe((params: Params) => {
-      if (params.idhospital == null) {
+      if (params.idhospital != null) {
         this.eliminarHospital(params.idhospital);
       } else {
         this.cargarHospitales();

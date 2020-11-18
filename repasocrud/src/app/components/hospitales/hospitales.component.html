@@ -1,4 +1,4 @@
-<p>hospitales works!</p>
+<h1>Hola</h1>
 <div *ngIf="hospitales.length > 0">
   <table class="table table-dark">
     <thead>
@@ -17,6 +17,13 @@
         <td>{{ hosp.direccion }}</td>
         <td>{{ hosp.telefono }}</td>
         <td>{{ hosp.camas }}</td>
+        <td>
+          <a
+            [routerLink]="['/modificar', hosp.idhospital]"
+            class="btn btn-danger"
+            >Borrar</a
+          >
+        </td>
       </tr>
     </tbody>
   </table>

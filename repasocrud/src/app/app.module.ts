@@ -8,6 +8,8 @@ import { ModificarComponent } from './components/modificar/modificar.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HospitalesService } from './services/hospitales.service';
+import { InsertarComponent } from './components/insertar/insertar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,9 @@ import { HospitalesService } from './services/hospitales.service';
     ModificarComponent,
     MenuComponent,
     HospitalesComponent,
+    InsertarComponent,
   ],
-  imports: [BrowserModule, routing, HttpClientModule],
+  imports: [BrowserModule, FormsModule, routing, HttpClientModule],
   providers: [appRoutingProvider, HospitalesService],
   bootstrap: [AppComponent],
 })
