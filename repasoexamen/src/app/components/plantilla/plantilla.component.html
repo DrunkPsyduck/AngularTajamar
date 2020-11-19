@@ -7,6 +7,8 @@
         <th>idhospital</th>
         <th>idsala</th>
         <th>apellido</th>
+        <th>oficio</th>
+        <th>Salario</th>
         <th></th>
       </tr>
     </thead>
@@ -23,6 +25,12 @@
         </td>
         <td>
           {{ plan.apellido }}
+        </td>
+        <td>
+          {{ plan.funcion }}
+        </td>
+        <td>
+          {{ plan.salario }}
         </td>
         <td>
           <a class="btn btn-info" [routerLink]="['/empleado', plan.idEmpleado]"
