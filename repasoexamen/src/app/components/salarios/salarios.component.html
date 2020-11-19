@@ -1,0 +1,48 @@
+<p>salarios works!</p>
+<div *ngIf="funciones.length > 0">
+  <form #formularioSalario="ngForm">
+    <select class="form-control" #cajadepartamento name="cajadepartamento">
+      <option *ngFor="let func of funciones" value="{{ func }}">
+        {{ func }}
+      </option>
+    </select>
+    <br />
+    <label> Salario </label>
+    <input
+      type="number"
+      #cajasalario
+      name="cajasalario"
+      class="form-control"
+    /><br />
+    <button class="btn btn-warning" (click)="updateSalario()">Insertar</button>
+  </form>
+</div>
+
+<div *ngIf="oficios.length > 0">
+  <table>
+    <thead>
+      <tr>
+        <th>id empleado</th>
+        <th>idhospital</th>
+        <th>apellido</th>
+        <th>salario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let of of oficios">
+        <td>
+          {{ of.idEmpleado }}
+        </td>
+        <td>
+          {{ of.idHospital }}
+        </td>
+        <td>
+          {{ of.apellido }}
+        </td>
+        <td>
+          {{ of.salario }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
